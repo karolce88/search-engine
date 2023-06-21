@@ -2,14 +2,13 @@ const search = document.querySelector('.search')
 const li = document.querySelectorAll('li')
 
 const searchEngine = (e) => {
-    const textFromInput = e.target.value.toLowerCase() 
+    const textFromInput = e.target.value.toLowerCase()
 
     li.forEach(textElement =>{
-        const task = textElement.textContent
 
-        if (task.toLocaleLowerCase().indexOf(textFromInput) !== -1) { 
+        if (textElement.textContent.toLocaleLowerCase().indexOf(textFromInput) !== -1) { 
             textElement.style.display = 'flex'
-        } else {
+        } else { 
             textElement.style.display = 'none'
         }
     })
